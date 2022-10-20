@@ -60,7 +60,7 @@ That is if travelDuration increases cost has to be low. If cost is also high and
 
 complexity:
 	each Flight can be considerd once while calculating for each Depart time in minutes by a class FindRecomendationFromDepTime. But the Flight will be considered  	if it is in the two day range from Depart time. so it can be considerd only for 2880 times(as this many depart times can have a flight in its calculation). in         each Depart time it can be considerd across multiple origin city at that depart time. which can be rounded to a constant C. 
-	so overall time complexity will be (totalFlights*2880*C). we can have same number of recommendations(travel solutions) so the space complexity would be the      	 same as well.
+	so overall time complexity will be (totalFlights * 2880 * C). we can have same number of recommendations(travel solutions) so the space complexity would be the      	 same as well.
 
 
 
