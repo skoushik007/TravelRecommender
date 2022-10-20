@@ -2,25 +2,25 @@
 This is a simple module that takes in a timeline of flights schedule and calculates a travel recommendation.
 
 a Flight input has below parameter:
-	origin	
-	destination	
-	departureTime(considered in "minutes since epoch" by the module)	
-	arrivalTime(considered in "minutes since epoch" by the module)	
+	origin,	
+	destination,	
+	departureTime(considered in "minutes since epoch" by the module),	
+	arrivalTime(considered in "minutes since epoch" by the module),	
 	costOfTravel	
 
 a recommendation has below parameter:
-	departureDay(considered in "days since epoch" by the module)
-	departureTime(considered in "minutes since epoch" by the module)
-	origin
-	destination
-	costoftravel
-	travelDuration(considered in minutes)
+	departureDay(considered in "days since epoch" by the module),
+	departureTime(considered in "minutes since epoch" by the module),
+	origin,
+	destination,
+	costoftravel,
+	travelDuration(considered in minutes),
 	flights(list of flights in order to go from origin to destination)
 
 
 ideally the user travelling will query by the below parameter:
-	day of travel
-	origin
+	day of travel,
+	origin,
 	destination
 
 and the recommendation that the module is calculating can be used to answer the user query.
