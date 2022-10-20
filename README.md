@@ -2,11 +2,11 @@
 This is a simple module that takes in a timeline of flights schedule and calculates a travel recommendation.
 
 a Flight input has below parameter:
-	origin
-	destination
-	departureTime(considered in "minutes since epoch" by the module)
-	arrivalTime(considered in "minutes since epoch" by the module)
-	costOfTravel
+	origin	
+	destination	
+	departureTime(considered in "minutes since epoch" by the module)	
+	arrivalTime(considered in "minutes since epoch" by the module)	
+	costOfTravel	
 
 a recommendation has below parameter:
 	departureDay(considered in "days since epoch" by the module)
@@ -66,7 +66,7 @@ complexity:
 	so it can be considerd only for 2880 times(as this many depart times can have a flight in its calculation). in each Depart time it can be considerd across multiple origin city at that depart time. which can be rounded
 	to a constant C. 
 	
-	so overall time complexity will be (totalFlights*2880*C). we can have some number of recommendations so the space complexity would be the same as well.
+	so overall time complexity will be (totalFlights*2880*C). we can have same number of recommendations so the space complexity would be the same as well.
 
 
 
