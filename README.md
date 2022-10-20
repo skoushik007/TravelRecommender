@@ -64,3 +64,86 @@ complexity:
 
 
 
+Test case example:
+
+input:
+Flight f1("BLR","DEL",0,3,1);
+InFlights.push_back(f1);
+
+Flight f2("ABC","DEL",0,4,2);
+InFlights.push_back(f2);
+
+Flight f3("DEL","ABC",38,42,3);
+InFlights.push_back(f3);
+
+Flight f4("DEL","ABC",40,42,2);
+InFlights.push_back(f4);
+
+Flight f5("DEL","ABC",33,35,2);
+InFlights.push_back(f5);
+
+output:	
+DepDay(day since epoch) 0
+DepMinute(minute since epoch)0
+Cost 4
+Travel Duration 42
+Flight List 1 3
+Ori ABC
+Dest ABC
+
+DepDay(day since epoch) 0
+DepMinute(minute since epoch)0
+Cost 2
+Travel Duration 4
+Flight List 1
+Ori ABC
+Dest DEL
+
+DepDay(day since epoch) 0
+DepMinute(minute since epoch)0
+Cost 3
+Travel Duration 35
+Flight List 0 4
+Ori BLR
+Dest ABC
+
+DepDay(day since epoch) 0
+DepMinute(minute since epoch)0
+Cost 1
+Travel Duration 3
+Flight List 0
+Ori BLR
+Dest DEL
+
+DepDay(day since epoch) 0
+DepMinute(minute since epoch)33
+Cost 2
+Travel Duration 2
+Flight List 4
+Ori DEL
+Dest ABC
+
+DepDay(day since epoch) 0
+DepMinute(minute since epoch)38
+Cost 3
+Travel Duration 4
+Flight List 2
+Ori DEL
+Dest ABC
+
+DepDay(day since epoch) 0
+DepMinute(minute since epoch)40
+Cost 2
+Travel Duration 2
+Flight List 3
+Ori DEL
+Dest ABC
+
+The flight List in the output recommendation is same as the index of flights in the input vector.
+
+
+TODO:
+	we can have a file based upload of flights input . we can have a Master service which can take care of uploading the flights to DB and assigning jobs to 	 multiple workers which fetches the  flights from DB and does a recommendation computation and uploads result back to DB. We can expose REST API for fetching
+	Recommendation from the system.
+	
+	
