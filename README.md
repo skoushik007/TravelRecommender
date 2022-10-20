@@ -72,6 +72,7 @@ That is if travelDuration increases cost has to be low. If cost is also high and
 # Test case example:
 
 # input:
+```
 Flight f1("BLR","DEL",0,3,1);
 InFlights.push_back(f1);
 
@@ -86,8 +87,9 @@ InFlights.push_back(f4);
 
 Flight f5("DEL","ABC",33,35,2);
 InFlights.push_back(f5);
-
+```
 # output:
+```
 DepDay(day since epoch) 0
 DepMinute(minute since epoch)0
 Cost 4
@@ -143,7 +145,7 @@ Travel Duration 2
 Flight List 3
 Ori DEL
 Dest ABC
-
+```
 The flight List in the output recommendation is same as the index of flights in the input vector.
 
 
