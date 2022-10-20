@@ -1,31 +1,31 @@
 # TravelRecommender
 This is a simple module that takes in a timeline of flights schedule and calculates a travel recommendation.
 
-a Flight input has below parameter:
-	origin,
-	destination,
-	departureTime(considered in "minutes since epoch" by the module),
-	arrivalTime(considered in "minutes since epoch" by the module),
-	costOfTravel
+# Flight input has below parameter:
+	1)origin,
+	2)destination,
+	3)departureTime(considered in "minutes since epoch" by the module),
+	4)arrivalTime(considered in "minutes since epoch" by the module),
+	5)costOfTravel
 
-a recommendation has below parameter:
-	departureDay(considered in "days since epoch" by the module),
-	departureTime(considered in "minutes since epoch" by the module),
-	origin,
-	destination,
-	costoftravel,
-	travelDuration(considered in minutes),
-	flights(list of flights in order to go from origin to destination)
+# recommendation has below parameter:
+	1)departureDay(considered in "days since epoch" by the module),
+	2)departureTime(considered in "minutes since epoch" by the module),
+	3)origin,
+	4)destination,
+	5)costoftravel,
+	6)travelDuration(considered in minutes),
+	7)flights(list of flights in order to go from origin to destination)
 
 
-ideally the user travelling will query by the below parameter:
-	day of travel,
-	origin,
-	destination
+# user travelling can query by the below parameter:
+	1)day of travel,
+	2)origin,
+	3)destination
 
-and the recommendation that the module is calculating can be used to answer the user query.
+and the recommendations that the module is calculating can be used to answer the user query.
 
-How module calculates the recommendation:
+# How module calculates the recommendation:
 		1)class FlightProcessor takes in all the flights and structure the flights into departure timeline and arrival timeline.
 		  departure timeline is a map sorted by departure time and against each departure time there will be a collection of
 		  flights departing at that time(at a fixed depart time there can be multiple flights departing from multiple origin city).
@@ -55,7 +55,7 @@ More foramlly we can represent travelSolution as below.
 
 cost = travelSolution(origin, destination, departureTime, arrivalTime)
 
-travelSolution function is what our module does, finds the cheapest route of all possible flight routes.
+travelSolution function is what our module does, finds the cheapest route of all possible flight routes that can occur between origin, destination.
 
 lets vary arrival time , let arrival1 < arrival2. we would expect something like below.
 
@@ -64,14 +64,14 @@ lets vary arrival time , let arrival1 < arrival2. we would expect something like
 That is if travelDuration increases cost has to be low. If cost is also high and travel duration is also high why to go with this recommendation. So these recommendations are left out by the module.
 
 
-complexity:
+# complexity:
 	each Flight will be considerd once while calculating for each Depart time in minutes by a class FindRecomendationFromDepTime. But the Flight will be considered  	 if it is in the two day range from Depart time. so it can be considerd only for 2880 times(as this many depart times can have a flight in its calculation). in         each Depart time it can be considerd across multiple origin city at that depart time. which can be rounded to a constant C. so overall time complexity will be         (totalFlights * 2880 * C). we can have same number of recommendations(travel solutions) so the space complexity would be the same as well.
 
 
 
-Test case example:
+# Test case example:
 
-input:
+# input:
 Flight f1("BLR","DEL",0,3,1);
 InFlights.push_back(f1);
 
@@ -87,7 +87,7 @@ InFlights.push_back(f4);
 Flight f5("DEL","ABC",33,35,2);
 InFlights.push_back(f5);
 
-output:
+# output:
 DepDay(day since epoch) 0
 DepMinute(minute since epoch)0
 Cost 4
