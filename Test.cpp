@@ -36,17 +36,17 @@ void case2(){
     Flight f1("BLR","DEL",0,3,1);
     InFlights.push_back(f1);
 
-    Flight f5("ABC","DEL",0,4,2);
-    InFlights.push_back(f5);
-
-    Flight f2("DEL","ABC",38,42,3);
+    Flight f2("ABC","DEL",0,4,2);
     InFlights.push_back(f2);
 
-    Flight f3("DEL","ABC",40,42,2);
+    Flight f3("DEL","ABC",38,42,3);
     InFlights.push_back(f3);
 
-    Flight f4("DEL","ABC",33,35,2);
+    Flight f4("DEL","ABC",40,42,2);
     InFlights.push_back(f4);
+
+    Flight f5("DEL","ABC",33,35,2);
+    InFlights.push_back(f5);
 
 
     FlightProcessor FP(InFlights);
