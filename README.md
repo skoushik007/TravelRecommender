@@ -148,7 +148,6 @@ The flight List in the output recommendation is same as the index of flights in 
 
 
 # TODO:
-	we can have a file based upload of flights input . we can have a Master service which can take care of uploading the flights to DB and assigning jobs to 	 multiple workers which fetches the  flights from DB and does a recommendation computation and uploads result back to DB. We can expose REST API for fetching
-	Recommendation from the system.
+	we can have a file based upload of flights input . we can have a Master service which can take care of uploading the flights to DB and assigning jobs to multiple workers which fetches the  flights from DB and does a recommendation computation and uploads result back to DB. We can expose REST API for fetching Recommendation from the system.
 
 
